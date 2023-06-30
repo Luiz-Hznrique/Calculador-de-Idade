@@ -39,9 +39,9 @@ input {
     height: 45px;
     border-radius: 6px;
 }
-input#button {
-    width: 92px;
-    height: 94px;
+button#button {
+    width: 90px;
+    height: 90px;
     border-radius: 94px;
     border: 1px solid #000;
     background: #854CFF;
@@ -52,11 +52,11 @@ input#button {
     left: 50em;
 
 }
-input#button:hover {
+button#button:hover {
     transition: ease 0.5s;
     background-color: #0d0202;
 }
-input#button:active {
+button#button:active {
     animation-name: animacao-clique;
     animation-duration: 0.3s;
 }
