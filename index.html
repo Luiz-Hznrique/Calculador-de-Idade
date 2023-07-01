@@ -12,38 +12,35 @@
     <form name="Formulario">
       <section class="inputs">
         <label for="day">Day</label> 
-        <input type="number" name="day" id="day" size="2" placeholder="DD">
+        <span><input type="number" name="day" id="day"  size="2" placeholder="DD"></span>
         <small id="error-day"></small>
       </section>
       <section class="inputs">
         <label for="month">Month</label>
-        <input type="number" name="month" id="month" size="2" placeholder="MM">
+       <span> <input type="number" name="month" id="month" size="2" placeholder="MM"></span>
         <small id="error-month"></small>
       </section>
       <section class="inputs">
         <label for="year">Year</label>
-        <input type="number" name="year" id="year" size="4" placeholder="YYYY">
+       <span id="cor"><input type="number" name="year" id="year"  size="4" placeholder="YYYY"></span>
         <small id="error-year"></small>
       </section>
   </form>
       
     
     <hr>
-    <button id="button" onclick="calcularIdade()">
+    <button id="button">
       <img src="assets/images/icon-arrow.svg" alt="buttao" >
     </button>
    
     
-    <b class="result"> <span id="Years">--</span> Years </b>
-    <b class="result"> <span id="Months">--</span> Months </b>
-    <b class="result"> <span id="Days">--</span> Days </b>
+    <h1 class="result"> <span id="Years">--</span> Years </h1>
+    <h1 class="result"> <span id="Months">--</span> Months </h1>
+    <h1 class="result"> <span id="Days">--</span> Days </h1>
 
   </div>
 
-  <script src="js/js.js"></script>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Luiz Henrique Vieira Machado</a>.
-  </div> -->
+  <script src="js/script.js"></script>
+
 </body>
 </html>
