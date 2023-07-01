@@ -43,11 +43,11 @@ input::-webkit-inner-spin-button{
     padding: 0.2em;
 }
 input {
-    width: 140px;
+    width: 150px;
     height: 45px;
     border-radius: 6px;
-    font-size: 15px;
-    border: 2px solid var(--OFF-white); 
+    font-size: 30px;
+    border: 2px solid hsl(0, 0%, 94%);
     outline: none;
 }
 input:focus{
@@ -60,6 +60,10 @@ small {
     text-transform: capitalize;
     display: table;
     margin: 5px;
+}
+.ativo{
+    border: 2px solid red;
+    outline: none;
 }
 button#button {
     width: 90px;
@@ -99,7 +103,7 @@ button#button:active {
     margin-bottom: 0.2em;
     display: block;
 }
-b.result{
+h1.result{
     display:block;
     font-size: 5rem;
     padding: 0 110px;
