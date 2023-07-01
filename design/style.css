@@ -1,22 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+:root {
+    --Light-red: hsl(0, 100%, 67%) ;
+    --OFF-white: hsl(0, 0%, 94%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Purple:hsl(259, 100%, 65%);
+}
 * {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    
 }
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(236, 235, 235);
+    background-color: var(--OFF-white);
     
 }
 #caixa{
     width: 900px;
     height: 650px;
-    background-color: white;
+    background-color: var(--White);
     border-radius: 20px;
     border-bottom-right-radius:200px;
     padding: 20px;
@@ -32,12 +41,25 @@ input::-webkit-inner-spin-button{
 }
 .inputs input[type="number"]{
     padding: 0.2em;
-    border: 1px solid black;
 }
 input {
     width: 140px;
     height: 45px;
     border-radius: 6px;
+    font-size: 15px;
+    border: 2px solid var(--OFF-white); 
+    outline: none;
+}
+input:focus{
+    border: 2px solid var(--Purple);
+}
+small {
+    color: red;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: table;
+    margin: 5px;
 }
 button#button {
     width: 90px;
@@ -77,6 +99,14 @@ button#button:active {
     margin-bottom: 0.2em;
     display: block;
 }
+b.result{
+    display:block;
+    font-size: 5rem;
+    padding: 0 110px;
+}
+span {
+    color: #854CFF;
+}
 
 
 
@@ -85,12 +115,3 @@ button#button:active {
 
 
 
-/* #button {
-    width: 92px;
-    height: 94px;
-    flex-shrink: 0;
-    border-radius: 94px;
-    border: 1px solid #000;
-    background: #854CFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-} */
