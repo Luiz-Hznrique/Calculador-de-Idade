@@ -6,7 +6,7 @@ Iniciando um desafio para criar um calculador de idades em JavaScript, o usuári
 
 
 # Deploy do projeto
-link:
+link: https://precious-tulumba-48f6b3.netlify.app
 
 # Tecnologias utilizadas
 ## Front end
