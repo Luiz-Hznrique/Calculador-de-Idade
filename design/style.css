@@ -47,7 +47,7 @@ input {
     height: 45px;
     border-radius: 6px;
     font-size: 30px;
-    border: 2px solid hsl(0, 0%, 94%);
+    /* border: 2px solid hsl(0, 0%, 94%); */
     outline: none;
 }
 input:focus{
@@ -61,9 +61,8 @@ small {
     display: table;
     margin: 5px;
 }
-.ativo{
-    border: 2px solid red;
-    outline: none;
+#vermelho{
+    color: red;
 }
 button#button {
     width: 90px;

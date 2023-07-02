@@ -14,7 +14,10 @@ const entrada_dia = document.querySelector("#day");
 const erro_ano = document.querySelector("#error-year");
 const erro_mes = document.querySelector("#error-month");
 const erro_dia = document.querySelector("#error-day");
-
+let corRed = document.querySelectorAll('label');
+function mudarCor(){
+    corRed[0].setAttribute('id', 'vermelho')
+}
 function calcularIdade(){
     if(calcularIdade){
         var aniversario =`${entrada_mes.value}/${entrada_dia.value}/${entrada_ano.value}`;
@@ -39,8 +42,7 @@ saida_botao.addEventListener("click", calcularIdade);
 function erro() {
     erro_dia.textContent = "Preencha este campo!";
     erro_mes.textContent = "Preencha este campo!";
-    erro_ano.textContent = "Preencha este campo!";
-    
+    erro_ano.textContent = "Preencha este campo!";    
 };
 function removerMensagens (){
     setTimeout(function(){
@@ -68,6 +70,7 @@ function dataIncompativel(){
 
 saida_botao.addEventListener("click", function (calcularIdade) {
     if(entrada_dia.value === "" && entrada_mes.value === "" && entrada_ano.value === ""){
+        mudarCor();
         removerMensagens();
         return erro();
     } else {
