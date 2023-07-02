@@ -3,14 +3,11 @@ const saida_ano = document.querySelector('#Years');
 const saida_mes = document.querySelector('#Months');
 const saida_dia = document.querySelector('#Days');
 const saida_botao = document.querySelector('#button');
-
 //Entrada de dados do usuário:
 const entrada_ano = document.querySelector("#year");
 const entrada_mes = document.querySelector("#month");
 const entrada_dia = document.querySelector("#day");
-
 // Erros caso usuário não insira dados corretos:
-
 const erro_ano = document.querySelector("#error-year");
 const erro_mes = document.querySelector("#error-month");
 const erro_dia = document.querySelector("#error-day");
@@ -35,7 +32,6 @@ function calcularIdade(){
         alert('Por favor, preencha todos os campos!');
     }
 }
-
 saida_botao.addEventListener("click", calcularIdade);
 function borderRed(){
     bordaBranca[1].setAttribute('class', 'red')
@@ -93,8 +89,6 @@ function erroAno(){
     bordaBranca[5].setAttribute('class', 'red')
     return;
 }
-
-
 saida_botao.addEventListener("click", function (calcularIdade) {
     if(entrada_dia.value === "" && entrada_mes.value === "" && entrada_ano.value === ""){
         removerMensagens();
@@ -103,8 +97,6 @@ saida_botao.addEventListener("click", function (calcularIdade) {
         return false;
     }
 });
-
-
 entrada_dia.addEventListener("input", (e) =>{
     if(entrada_dia.value >= 32){
         return erroDia();
