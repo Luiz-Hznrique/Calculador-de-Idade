@@ -45,9 +45,22 @@ input::-webkit-inner-spin-button{
 input {
     width: 150px;
     height: 45px;
-    border-radius: 6px;
     font-size: 30px;
-    /* border: 2px solid hsl(0, 0%, 94%); */
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid var(--OFF-white);
+}
+.fonte{
+    color: red;
+    margin-bottom: 0.2em;
+    display: block;
+}
+.white {
+    width: 150px;
+    height: 45px;
+    font-size: 30px;
+    border-radius: 6px;
+    border: 2px solid var(--OFF-white);
     outline: none;
 }
 input:focus{
@@ -61,7 +74,13 @@ small {
     display: table;
     margin: 5px;
 }
-#vermelho{
+.red {
+    width: 150px;
+    height: 45px;
+    font-size: 30px;
+    border-radius: 6px;
+    border: 2px solid red;
+    outline: none;
     color: red;
 }
 button#button {
@@ -97,7 +116,12 @@ button#button:active {
     }
   }
 
-.inputs label {
+.label {
+    color: gray;
+    margin-bottom: 0.2em;
+    display: block;
+}
+label {
     color: gray;
     margin-bottom: 0.2em;
     display: block;

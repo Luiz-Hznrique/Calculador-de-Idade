@@ -14,10 +14,9 @@ const entrada_dia = document.querySelector("#day");
 const erro_ano = document.querySelector("#error-year");
 const erro_mes = document.querySelector("#error-month");
 const erro_dia = document.querySelector("#error-day");
-let corRed = document.querySelectorAll('label');
-function mudarCor(){
-    corRed[0].setAttribute('id', 'vermelho')
-}
+let bordaBranca = document.querySelectorAll('.cor');
+let fonte = document.querySelectorAll('label');
+
 function calcularIdade(){
     if(calcularIdade){
         var aniversario =`${entrada_mes.value}/${entrada_dia.value}/${entrada_ano.value}`;
@@ -38,39 +37,66 @@ function calcularIdade(){
 }
 
 saida_botao.addEventListener("click", calcularIdade);
-
+function borderRed(){
+    bordaBranca[1].setAttribute('class', 'red')
+    bordaBranca[3].setAttribute('class', 'red')
+    bordaBranca[5].setAttribute('class', 'red')
+}
 function erro() {
-    erro_dia.textContent = "Preencha este campo!";
-    erro_mes.textContent = "Preencha este campo!";
-    erro_ano.textContent = "Preencha este campo!";    
+        fonte[0].setAttribute('class', 'fonte')
+        fonte[1].setAttribute('class','fonte')
+        fonte[2].setAttribute('class','fonte')
+        erro_dia.textContent = "Preencha este campo!";
+        erro_mes.textContent = "Preencha este campo!";
+        erro_ano.textContent = "Preencha este campo!";
+        borderRed();     
 };
 function removerMensagens (){
     setTimeout(function(){
+        fonte[0].setAttribute('class','label')
+        fonte[1].setAttribute('class','label')
+        fonte[2].setAttribute('class','label')
+        bordaBranca[1].setAttribute('class', 'white')
+        bordaBranca[3].setAttribute('class', 'white')
+        bordaBranca[5].setAttribute('class', 'white')
         erro_dia.textContent = "";
         erro_mes.textContent = "";
         erro_ano.textContent = "";
-    }, 2000)
+    },2000)
+}
+function removeErro(){
+    fonte[0].setAttribute('class','label')
+    fonte[1].setAttribute('class','label')
+    fonte[2].setAttribute('class','label')
+    bordaBranca[1].setAttribute('class', 'white')
+    bordaBranca[3].setAttribute('class', 'white')
+    bordaBranca[5].setAttribute('class', 'white')
+    erro_dia.textContent = "";
+    erro_mes.textContent = "";
+    erro_ano.textContent = "";
 }
 function erroDia(){
     erro_dia.textContent = "Dia inválido!";
+     fonte[0].setAttribute('class', 'fonte')
+     bordaBranca[1].setAttribute('class', 'red')
     return;
 }
 function erroMes(){
     erro_mes.textContent = "Mês inválido!";
+    fonte[1].setAttribute('class', 'fonte')
+    bordaBranca[3].setAttribute('class', 'red')
     return;
 }
 function erroAno(){
     erro_ano.textContent = "Ano inválido!";
-    return;
-}
-function dataIncompativel(){
-    erro_dia.textContent = "Data incompatível!";
+    fonte[2].setAttribute('class', 'fonte')
+    bordaBranca[5].setAttribute('class', 'red')
     return;
 }
 
+
 saida_botao.addEventListener("click", function (calcularIdade) {
     if(entrada_dia.value === "" && entrada_mes.value === "" && entrada_ano.value === ""){
-        mudarCor();
         removerMensagens();
         return erro();
     } else {
@@ -78,21 +104,25 @@ saida_botao.addEventListener("click", function (calcularIdade) {
     }
 });
 
+
 entrada_dia.addEventListener("input", (e) =>{
     if(entrada_dia.value >= 32){
-        removerMensagens();
         return erroDia();
+    } else{
+        removeErro();
     }
 });
 entrada_mes.addEventListener("input", (e) =>{
     if(entrada_mes.value >= 13){
-        removerMensagens();
         return erroMes();
+    } else {
+        removeErro();
     }
 });
 entrada_ano.addEventListener("input", (e) =>{
     if(entrada_ano.value >= 2024){
-        removerMensagens();
         return erroAno();
+    } else {
+        removeErro();
     }
 });
